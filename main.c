@@ -17,21 +17,15 @@
 int main(void)
 {
 
-	//  uint32_t n;
+	///////////////////////////////////////////////////////////
+	// Initialize system
+	SystemInit();
+	UB_VGA_Screen_Init();
+	UB_VGA_FillScreen(VGA_COL_BLACK);
 
-	SystemInit(); // System speed to 168MHz
-
-	UB_VGA_Screen_Init(); // Init VGA-Screen
-
-  UB_VGA_FillScreen(VGA_COL_BLACK);
-  UB_VGA_SetPixel(10,10,10);
-
-
-
-
-  while(1)
-  {
-	  // put the code here
-  }
+    while(1)
+    {
+    	// put the code here
+    }
 }
 
