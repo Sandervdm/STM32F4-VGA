@@ -11,17 +11,18 @@
 //--------------------------------------------------------------
 
 #include "main.h"
-#include "stm32_ub_vga_screen.h"
-#include <math.h>
 
 int main(void)
 {
-
 	///////////////////////////////////////////////////////////
 	// Initialize system
 	SystemInit();
+
+	// Initialize screen
 	UB_VGA_Screen_Init();
 	UB_VGA_FillScreen(VGA_COL_BLACK);
+
+
 
     while(1)
     {
