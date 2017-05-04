@@ -14,15 +14,12 @@
       <source file="..\..\..\ub_lib\stm32_ub_vga_screen.c" lastModified="15b8adf1a8e">
          <include file="..\..\..\ub_lib\stm32_ub_vga_screen.h"/>
       </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="15b8adf1a23">
+      </source>
       <source file="..\..\..\ub_api\stm32_ub_pixel_api.h" lastModified="15bc9391946">
          <include file="..\..\..\main.h"/>
       </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="15b8adf1a23">
-      </source>
       <source file="..\..\..\ub_api\stm32_ub_shape_api.h" lastModified="15bc93a0c87">
-         <include file="..\..\..\main.h"/>
-      </source>
-      <source file="..\..\..\ub_api\stm32_ub_font_api.h" lastModified="15bc9402807">
          <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15b8adf1a1c">
@@ -35,8 +32,14 @@
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="15b8adf1a3e">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
+      <source file="..\..\..\ub_api\stm32_ub_pixel_api.c" lastModified="15bd2d21de9">
+         <include file="..\..\..\ub_api\stm32_ub_pixel_api.h"/>
+      </source>
       <source file="..\..\..\cmsis_lib\include\misc.h" lastModified="15b8adf1a2c">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\ub_api\stm32_ub_shape_api.c" lastModified="15bc94d8d00">
+         <include file="..\..\..\ub_api\stm32_ub_shape_api.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="15b8adf1a61">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
@@ -60,7 +63,7 @@
       <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="15b8adf1a5a">
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
       </source>
-      <source file="..\..\..\main.h" lastModified="15bc9342d4a">
+      <source file="..\..\..\main.h" lastModified="15bd2d502dd">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
@@ -78,13 +81,13 @@
       </source>
       <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15b8adf1dca">
       </source>
-      <source file="..\..\..\main.c" lastModified="15bc930a500">
+      <source file="..\..\..\main.c" lastModified="15bc94d8cb2">
          <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15b8adf1a71">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\ub_api\stm32_ub_bitmap_api.h" lastModified="15bc9371a48">
+      <source file="..\..\..\ub_api\stm32_ub_bitmap_api.h" lastModified="15bd2cd5fa5">
          <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15b8adf19f7">
@@ -94,6 +97,9 @@
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
       <source file="..\..\..\cmsis\core_cm4_simd.h" lastModified="15b8adf1db9">
+      </source>
+      <source file="..\..\..\ub_api\stm32_ub_bitmap_api.c" lastModified="15bd2d17679">
+         <include file="..\..\..\ub_api\stm32_ub_bitmap_api.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h" lastModified="15b8adf1a48">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>

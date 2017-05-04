@@ -22,8 +22,6 @@ int main(void)
 	UB_VGA_Screen_Init();
 	UB_VGA_FillScreen(VGA_COL_BLACK);
 
-
-
     while(1)
     {
     	// put the code here

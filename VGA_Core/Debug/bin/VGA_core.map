@@ -30,7 +30,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x28 ..\obj\stm32_ub_pixel_api.o
  .debug_ranges  0x00000000       0x18 ..\obj\stm32_ub_pixel_api.o
- .debug_line    0x00000000      0x149 ..\obj\stm32_ub_pixel_api.o
+ .debug_line    0x00000000      0x14a ..\obj\stm32_ub_pixel_api.o
  .debug_str     0x00000000      0x1f5 ..\obj\stm32_ub_pixel_api.o
  .comment       0x00000000       0x71 ..\obj\stm32_ub_pixel_api.o
  .ARM.attributes
@@ -41,13 +41,13 @@ Discarded input sections
  .bss           0x00000000        0x0 ..\obj\stm32_ub_font_api.o
  .text.font_write_string
                 0x00000000       0x18 ..\obj\stm32_ub_font_api.o
- .debug_info    0x00000000      0x197 ..\obj\stm32_ub_font_api.o
- .debug_abbrev  0x00000000       0xde ..\obj\stm32_ub_font_api.o
+ .debug_info    0x00000000      0x1dd ..\obj\stm32_ub_font_api.o
+ .debug_abbrev  0x00000000       0xf4 ..\obj\stm32_ub_font_api.o
  .debug_aranges
                 0x00000000       0x20 ..\obj\stm32_ub_font_api.o
  .debug_ranges  0x00000000       0x10 ..\obj\stm32_ub_font_api.o
- .debug_line    0x00000000      0x13a ..\obj\stm32_ub_font_api.o
- .debug_str     0x00000000      0x1ff ..\obj\stm32_ub_font_api.o
+ .debug_line    0x00000000      0x171 ..\obj\stm32_ub_font_api.o
+ .debug_str     0x00000000      0x248 ..\obj\stm32_ub_font_api.o
  .comment       0x00000000       0x71 ..\obj\stm32_ub_font_api.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\stm32_ub_font_api.o
@@ -148,13 +148,13 @@ Discarded input sections
  .bss           0x00000000        0x0 ..\obj\stm32_ub_bitmap_api.o
  .text.draw_bmp
                 0x00000000       0x18 ..\obj\stm32_ub_bitmap_api.o
- .debug_info    0x00000000      0x174 ..\obj\stm32_ub_bitmap_api.o
- .debug_abbrev  0x00000000       0xd5 ..\obj\stm32_ub_bitmap_api.o
+ .debug_info    0x00000000      0x1ac ..\obj\stm32_ub_bitmap_api.o
+ .debug_abbrev  0x00000000       0xeb ..\obj\stm32_ub_bitmap_api.o
  .debug_aranges
                 0x00000000       0x20 ..\obj\stm32_ub_bitmap_api.o
  .debug_ranges  0x00000000       0x10 ..\obj\stm32_ub_bitmap_api.o
- .debug_line    0x00000000      0x13c ..\obj\stm32_ub_bitmap_api.o
- .debug_str     0x00000000      0x1e2 ..\obj\stm32_ub_bitmap_api.o
+ .debug_line    0x00000000      0x173 ..\obj\stm32_ub_bitmap_api.o
+ .debug_str     0x00000000      0x248 ..\obj\stm32_ub_bitmap_api.o
  .comment       0x00000000       0x71 ..\obj\stm32_ub_bitmap_api.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\stm32_ub_bitmap_api.o
