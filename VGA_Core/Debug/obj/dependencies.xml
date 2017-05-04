@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
    <includePath signature="/I..\..\..\..\..\Users\Sander\Documents\GitHub\STM32F4-VGA\ub_api /I..\..\..\..\..\Users\Sander\Documents\GitHub /I..\..\..\..\..\Users\Sander\Documents\GitHub\STM32F4-VGA\ub_lib /I..\..\..\..\..\Users\Sander\Documents /I..\..\..\..\..\Users\Sander\Documents\GitHub\STM32F4-VGA /I..\..\..\..\..\Users\Sander\Documents\GitHub\STM32F4-VGA\cmsis_boot /I..\..\..\..\..\Users\Sander\Documents\GitHub\STM32F4-VGA\cmsis_lib /I..\..\..\..\..\Users\Sander\Documents\GitHub\STM32F4-VGA\cmsis /I..\..\..\..\..\Users\Sander\Documents\GitHub\STM32F4-VGA\cmsis_lib\include">
-      <source file="..\..\..\ub_lib\stm32_ub_vga_screen.h" lastModified="15bc9302eb2">
+      <source file="..\..\..\ub_lib\stm32_ub_vga_screen.h" lastModified="15bd367dd11">
          <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15b8adf1dd6">
@@ -11,7 +11,7 @@
          <include file="..\..\..\cmsis\core_cmFunc.h"/>
          <include file="..\..\..\cmsis\core_cm4_simd.h"/>
       </source>
-      <source file="..\..\..\ub_lib\stm32_ub_vga_screen.c" lastModified="15b8adf1a8e">
+      <source file="..\..\..\ub_lib\stm32_ub_vga_screen.c" lastModified="15bd36841fe">
          <include file="..\..\..\ub_lib\stm32_ub_vga_screen.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="15b8adf1a23">
@@ -20,6 +20,9 @@
          <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\ub_api\stm32_ub_shape_api.h" lastModified="15bc93a0c87">
+         <include file="..\..\..\main.h"/>
+      </source>
+      <source file="..\..\..\ub_api\stm32_ub_font_api.h" lastModified="15bd3461602">
          <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15b8adf1a1c">
@@ -41,15 +44,19 @@
       <source file="..\..\..\ub_api\stm32_ub_shape_api.c" lastModified="15bc94d8d00">
          <include file="..\..\..\ub_api\stm32_ub_shape_api.h"/>
       </source>
+      <source file="..\..\..\ub_api\stm32_ub_font_api.c" lastModified="15bd346e5b7">
+         <include file="..\..\..\ub_api\stm32_ub_font_api.h"/>
+      </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="15b8adf1a61">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="15b8adf682d">
+      <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="15b8adf6445">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="15b8adf1dec">
@@ -60,16 +67,20 @@
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15b8adf1a50">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h" lastModified="15bd35d1641">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
       <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="15b8adf1a5a">
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
       </source>
-      <source file="..\..\..\main.h" lastModified="15bd2d502dd">
+      <source file="..\..\..\main.h" lastModified="15bd35d7228">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
          <include file="..\..\..\ub_lib\stm32_ub_vga_screen.h"/>
          <include file="..\..\..\ub_api\stm32_ub_bitmap_api.h"/>
          <include file="..\..\..\ub_api\stm32_ub_font_api.h"/>
@@ -79,10 +90,11 @@
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h" lastModified="15b8adf1a35">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15b8adf1dca">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_usart.c" lastModified="15bd35d1641">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\main.c" lastModified="15bc94d8cb2">
-         <include file="..\..\..\main.h"/>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15b8adf1dca">
       </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15b8adf1a71">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>

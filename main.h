@@ -35,7 +35,12 @@ typedef enum{
 #include "stm32f4xx_tim.h"
 #include "stm32f4xx_dma.h"
 #include "misc.h"
-#include <math.h>
+#include "math.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
+
+#include "stm32f4xx_usart.h"
 
 #include "stm32_ub_vga_screen.h"
 #include "stm32_ub_bitmap_api.h"
