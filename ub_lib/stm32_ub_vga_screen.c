@@ -86,13 +86,14 @@ void UB_VGA_FillScreen(uint8_t color)
 // put one Pixel on the screen with one color
 // Important : the last Pixel+1 from every line must be black (don't know why??)
 //--------------------------------------------------------------
-void UB_VGA_SetPixel(uint16_t xp, uint16_t yp, uint8_t color)
+unsigned char UB_VGA_SetPixel(uint16_t xp, uint16_t yp, uint8_t color)
 {
-  if(xp>=VGA_DISPLAY_X) xp=0;
-  if(yp>=VGA_DISPLAY_Y) yp=0;
+  if(xp>=VGA_DISPLAY_X) return 1;
+  if(yp>=VGA_DISPLAY_Y) return 1;
 
   // Write pixel to ram
   VGA_RAM1[(yp*(VGA_DISPLAY_X+1))+xp]=color;
+  return 0;
 }
 
 
@@ -319,7 +320,17 @@ void P_VGA_InitDMA(void)
   TIM_DMACmd(TIM1,TIM_DMA_Update,ENABLE);
 }
 
-
+int InterruptCounter = 0;
+unsigned char SecTick(void)
+{
+	if(InterruptCounter > 60) {
+		InterruptCounter = 0;
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
 
 //--------------------------------------------------------------
 // Interrupt of Timer2
@@ -329,17 +340,8 @@ void P_VGA_InitDMA(void)
 //--------------------------------------------------------------
 void TIM2_IRQHandler(void)
 {
-
   // Interrupt of Timer2 CH3 occurred (for Trigger start)
   TIM_ClearITPendingBit(TIM2, TIM_IT_CC3);
-
-  VGA.hsync_cnt++;
-  if(VGA.hsync_cnt>=VGA_VSYNC_PERIODE) {
-    // -----------
-    VGA.hsync_cnt=0;
-    // Adresspointer first dot
-    VGA.start_adr=(uint32_t)(&VGA_RAM1[0]);
-  }
 
   // HSync-Pixel
   if(VGA.hsync_cnt<VGA_VSYNC_IMP) {
@@ -349,6 +351,15 @@ void TIM2_IRQHandler(void)
   else {
     // HSync High
     GPIOB->BSRRL = GPIO_Pin_12;
+  }
+
+  VGA.hsync_cnt++;
+  if(VGA.hsync_cnt>=VGA_VSYNC_PERIODE) {
+    // -----------
+    VGA.hsync_cnt=0;
+    // Adresspointer first dot
+    VGA.start_adr=(uint32_t)(&VGA_RAM1[0]);
+    InterruptCounter++;
   }
 
   // Test for DMA start

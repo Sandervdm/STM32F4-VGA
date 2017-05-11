@@ -10,14 +10,7 @@
 //--------------------------------------------------------------
 // Includes
 //--------------------------------------------------------------
-#include "stm32f4xx.h"
-#include "stm32f4xx_gpio.h"
-#include "stm32f4xx_rcc.h"
-#include "stm32f4xx_tim.h"
-#include "misc.h"
-#include "stm32f4xx_dma.h"
-
-
+#include "main.h"
 
 //--------------------------------------------------------------
 // color designation
@@ -130,7 +123,8 @@ uint8_t VGA_RAM1[(VGA_DISPLAY_X+1)*VGA_DISPLAY_Y];
 //--------------------------------------------------------------
 void UB_VGA_Screen_Init(void);
 void UB_VGA_FillScreen(uint8_t color);
-void UB_VGA_SetPixel(uint16_t xp, uint16_t yp, uint8_t color);
+unsigned char UB_VGA_SetPixel(uint16_t xp, uint16_t yp, uint8_t color);
+unsigned char SecTick(void);
 
 //--------------------------------------------------------------
 #endif // __STM32F4_UB_VGA_SCREEN_H
