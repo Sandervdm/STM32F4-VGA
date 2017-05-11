@@ -16,7 +16,8 @@ typedef enum{
 
 typedef enum{
 	FONT_ONE,
-	FONT_TWO
+	FONT_TWO,
+	FONT_THREE
 } FONT_TYPE;
 
 typedef enum{
@@ -24,6 +25,16 @@ typedef enum{
 	STYLE_BOLD,
 	STYLE_FLASH
 } STYLE_TYPE;
+
+struct blinkSkeleton{
+	FONT_TYPE font_type;
+	char str[50];
+	unsigned int posX;
+	unsigned int posY;
+	unsigned char size;
+	unsigned char color;
+	unsigned char State;
+};
 
 /*
  * includes from stm32 libraries and API
@@ -47,5 +58,7 @@ typedef enum{
 #include "stm32_ub_font_api.h"
 #include "stm32_ub_pixel_api.h"
 #include "stm32_ub_shape_api.h"
+
+#define BACKGROUND_COLOR		VGA_COL_WHITE
 
 #endif // __STM32F4_UB_MAIN_H
